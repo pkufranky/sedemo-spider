@@ -5,7 +5,8 @@
 
 from scrapy.item import Item, Field
 
-class AppleItem(Item):
-    # define the fields for your item here like:
-    # name = Field()
-    pass
+class NovelItem(Item):
+    name = Field()
+    intro = Field()
+    img_url = Field()
+    page_url = Field()

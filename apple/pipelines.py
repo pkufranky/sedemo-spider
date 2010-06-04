@@ -1,8 +1,8 @@
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: http://doc.scrapy.org/topics/item-pipeline.html
+from apple.contrib.store import StoreItem
 
-class ApplePipeline(object):
-    def process_item(self, spider, item):
+class StoragePipeline(StoreItem):
+    def process_item(self, spider, item): # {{{
+        self.store_item(item, spider)
         return item
+    # end def }}}
+

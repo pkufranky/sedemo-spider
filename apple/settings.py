@@ -18,3 +18,8 @@ NEWSPIDER_MODULE = 'apple.spiders'
 DEFAULT_ITEM_CLASS = 'apple.items.AppleItem'
 USER_AGENT = '%s/%s' % (BOT_NAME, BOT_VERSION)
 
+ITEM_PIPELINES = [
+    'apple.pipelines.StoragePipeline',
+]
+DB_URL = 'mysql://root:@localhost/spiderdb?charset=utf8&use_unicode=0'
+DB_TABLE = 'novel_items'
